@@ -1,3 +1,4 @@
+/* --------- primary font --------------- */
 .hind-madurai-light {
   font-family: "Hind Madurai", sans-serif;
   font-weight: 300;
@@ -29,7 +30,7 @@
 }
 
 
-/* banner styles */
+/* -------- banner styles-----------  */
 #banner-bg {
   background: linear-gradient(90.00deg, rgba(1.251827359199524, 49.64006805419922, 34.606834411621094, 1),rgba(0, 103, 71, 1) 50%,rgba(1, 50, 35, 1) 100%);
 }
@@ -43,4 +44,11 @@
   font-size: 1.25rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+
+/* ------------- secondary color-----------  */
+
+.secondary-color {
+  color: #5c5c5c;
 }
