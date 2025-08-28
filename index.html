@@ -34,9 +34,9 @@
     <header>
       <!-- nav bar start here -->
       <nav
-        class="w-11/12 mx-auto navbar bg-base-100 flex justify-between items-center"
+        class="w-11/12 mx-auto navbar bg-base-100 flex-col md:flex-row  md:justify-between md:items-center"
       >
-        <div class="flex justify-between items-center">
+        <div class="flex justify md:justify-between items-center">
           <img
             class="w-[50px] h-[50px]"
             src="./assets/logo.png"
@@ -81,7 +81,7 @@
       <!-- banner start here -->
       <section
         id="banner-bg"
-        class="py-10 space-y-5 text-center flex flex-col justify-center items-center"
+        class="py-10 px-2 md:px-0 space-y-5 text-center flex flex-col justify-center items-center"
       >
         <img
           src="./assets/logo.png"
@@ -101,10 +101,10 @@
 
     <!-- main section start here  -->
     <main class="bg-[#f5fff6] p-10">
-      <div class="services w-11/12 mx-auto grid grid-cols-12 gap-8">
+      <div class="services w-11/12 mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
         <!-- card container -->
-        <div class="card-container col-span-9">
-          <div class="grid grid-cols-3 gap-4">
+        <div class="card-container w-full md:col-span-9">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- card 1 -->
             <div id="card1" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
@@ -413,7 +413,7 @@
 
         <!-- call history container -->
         <div
-          class="col-span-3 bg-white shadow-md border border-gray-200 p-4 rounded-lg"
+          class="w-full md:col-span-3 bg-white shadow-md border border-gray-200 p-4 rounded-lg"
         >
           <div class="flex justify-between items-center">
             <p>

@@ -55,10 +55,11 @@ for (button of callBtn) {
 
       // find target element
       const targetSelector = btn.dataset.copyTarget;
-      const el = document.querySelector(targetSelector);
-      if (!el) return;
+      const copiedElem = document.querySelector(targetSelector);
+      if (!copiedElem) return;
 
-      const text = el.innerText.trim();
+      const text = copiedElem.innerText.trim();
+       alert(`The number has been copied: ${text}`);
 
       // modern Clipboard API
       if (navigator.clipboard && window.isSecureContext) {
@@ -68,15 +69,15 @@ for (button of callBtn) {
       } 
       // fallback method
       else {
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
+        const textAr = document.createElement('textarea');
+        textAr.value = text;
+        textAr.style.position = 'fixed';
+        textAr.style.opacity = '0';
+        document.body.appendChild(textAr);
+        textAr.focus();
+        textAr.select();
         document.execCommand('copy');
-        ta.remove();
+        textAr.remove();
         showStatus(btn, 'The number has been copied!');
       }
     });
