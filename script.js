@@ -49,6 +49,9 @@ for (button of callBtn) {
  document.addEventListener('click', (e) => {
       const btn = e.target.closest('.copy-btn');
       if (!btn) return;
+      let count = parseInt(document.getElementById('copy-count').innerText);
+      count += 1;
+      document.getElementById('copy-count').innerText = count;  
 
       // find target element
       const targetSelector = btn.dataset.copyTarget;
