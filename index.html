@@ -105,7 +105,7 @@
         <div class="card-container col-span-9">
           <div class="grid grid-cols-3 gap-4">
             <!-- card 1 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card1" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img src="./assets/emergency.png" class="w-[50px] h-[50px]" />
                 <button class="heart-btn btn btn-xs bg-white border-none">
@@ -114,7 +114,7 @@
               </div>
               <h2 class="font-bold mt-2">National Emergency Number</h2>
               <p class="secondary-color text-sm">National Emergency</p>
-              <h2 class="font-bold mt-2">999</h2>
+              <h2 class="font-bold mt-2 copy-text">999</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   All
@@ -122,12 +122,14 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card1 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
-                <button 
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
+                <button
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
                   <i class="fa-solid fa-phone text-xs"></i>
@@ -136,7 +138,7 @@
               </div>
             </div>
             <!-- card 2 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card2" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img src="./assets/police.png" class="w-[50px] h-[50px]" />
                 <button class="heart-btn btn btn-xs bg-white border-none">
@@ -145,7 +147,7 @@
               </div>
               <h2 class="font-bold mt-2">Police Helpline Number</h2>
               <p class="secondary-color text-sm">Police</p>
-              <h2 class="font-bold mt-2">999</h2>
+              <h2 class="font-bold mt-2 copy-text">999</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   Police
@@ -153,11 +155,13 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card2 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
                 <button 
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
@@ -167,7 +171,7 @@
               </div>
             </div>
             <!-- card 3 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card3" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/fire-service.png"
@@ -179,7 +183,7 @@
               </div>
               <h2 class="font-bold mt-2">Fire Service Number</h2>
               <p class="secondary-color text-sm">Fire Service</p>
-              <h2 class="font-bold mt-2">999</h2>
+              <h2 class="font-bold mt-2 copy-text">999</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   Fire
@@ -187,12 +191,14 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card3 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
-                <button 
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
+                <button
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
                   <i class="fa-solid fa-phone text-xs"></i>
@@ -201,7 +207,7 @@
               </div>
             </div>
             <!-- card 4 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card4" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img src="./assets/ambulance.png" class="w-[50px] h-[50px]" />
                 <button class="heart-btn btn btn-xs bg-white border-none">
@@ -210,7 +216,7 @@
               </div>
               <h2 class="font-bold mt-2">Ambulance Service</h2>
               <p class="secondary-color text-sm">Ambulance</p>
-              <h2 class="font-bold mt-2">1994-999999</h2>
+              <h2 class="font-bold mt-2 copy-text">1994-999999</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   Health
@@ -218,11 +224,13 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card4 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
                 <button 
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
@@ -232,7 +240,7 @@
               </div>
             </div>
             <!-- card 5 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card5" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img src="./assets/emergency.png" class="w-[50px] h-[50px]" />
                 <button class="heart-btn btn btn-xs bg-white border-none">
@@ -241,7 +249,7 @@
               </div>
               <h2 class="font-bold mt-2">Women & Child Helpline</h2>
               <p class="secondary-color text-sm">Women & Child Helpline</p>
-              <h2 class="font-bold mt-2">109</h2>
+              <h2 class="font-bold mt-2 copy-text">109</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   Help
@@ -249,12 +257,14 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card5 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
-                <button 
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
+                <button
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
                   <i class="fa-solid fa-phone text-xs"></i>
@@ -263,7 +273,7 @@
               </div>
             </div>
             <!-- card 6 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card6" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img src="./assets/emergency.png" class="w-[50px] h-[50px]" />
                 <button class="heart-btn btn btn-xs bg-white border-none">
@@ -272,7 +282,7 @@
               </div>
               <h2 class="font-bold mt-2">Anti-Corruption Helpline</h2>
               <p class="secondary-color text-sm">Anti-Corruption</p>
-              <h2 class="font-bold mt-2">106</h2>
+              <h2 class="font-bold mt-2 copy-text">106</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   Govt.
@@ -280,11 +290,13 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card6 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
                 <button 
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
@@ -294,7 +306,7 @@
               </div>
             </div>
             <!-- card 7 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card7" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img src="./assets/ambulance.png" class="w-[50px] h-[50px]" />
                 <button class="heart-btn btn btn-xs bg-white border-none">
@@ -303,7 +315,7 @@
               </div>
               <h2 class="font-bold mt-2">Electricity Helpline</h2>
               <p class="secondary-color text-sm">Electricity Outage</p>
-              <h2 class="font-bold mt-2">16216</h2>
+              <h2 class="font-bold mt-2 copy-text">16216</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   Electricity
@@ -311,11 +323,13 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card7 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
                 <button 
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
@@ -325,7 +339,7 @@
               </div>
             </div>
             <!-- card 8 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card8" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img src="./assets/brac.png" class="w-[50px] h-[50px]" />
                 <button class="heart-btn btn btn-xs bg-white border-none">
@@ -334,7 +348,7 @@
               </div>
               <h2 class="font-bold mt-2">Brac Helpline</h2>
               <p class="secondary-color text-sm">Brac</p>
-              <h2 class="font-bold mt-2">16445</h2>
+              <h2 class="font-bold mt-2 copy-text">16445</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   NGO
@@ -342,11 +356,13 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card8 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
                 <button 
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
@@ -356,7 +372,7 @@
               </div>
             </div>
             <!-- card 9 -->
-            <div class="card bg-white shadow-md border border-gray-200 p-4">
+            <div id="card9" class="card bg-white shadow-md border border-gray-200 p-4 relative">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/Bangladesh-Railway.png"
@@ -368,7 +384,7 @@
               </div>
               <h2 class="font-bold mt-2">Bangladesh Railway Helpline</h2>
               <p class="secondary-color text-sm">Bangladesh Railway</p>
-              <h2 class="font-bold mt-2">163</h2>
+              <h2 class="font-bold mt-2 copy-text">163</h2>
               <div class="justify-start">
                 <button class="bg-[#f2f2f2] px-3 py-1 rounded-xl text-sm">
                   Travel
@@ -376,12 +392,14 @@
               </div>
               <div class="flex justify-between gap-2 mt-4">
                 <button
-                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md"
+                  class="btn btn-xs bg-white border border-gray-200 w-[47%] rounded-md copy-btn"
+                  data-copy-target="#card9 .copy-text"
                 >
                   <i class="fa-regular fa-copy"></i>
                   Copy
                 </button>
-                <button 
+                <output class="copy-status absolute right-2 top-1 text-green-600" aria-live="polite"></output>
+                <button
                   class="call-btn btn btn-xs bg-[#00A63E] text-white w-[47%] rounded-md"
                 >
                   <i class="fa-solid fa-phone text-xs"></i>

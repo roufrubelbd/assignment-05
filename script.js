@@ -21,7 +21,7 @@ for (button of callBtn) {
     }
     const serviceName = e.target.parentNode.parentNode.children[1].innerText;
     const serviceNumber = e.target.parentNode.parentNode.children[3].innerText;
-    const serviceSector = e.target.parentNode.parentNode.children[4].innerText;
+    const date = new Date().toLocaleTimeString();
     alert(`Service Name: ${serviceName}, Service Number: ${serviceNumber}`);
     document.getElementById('call-count').innerText = callCount;
 
@@ -36,7 +36,7 @@ for (button of callBtn) {
               <h2 class="font-bold mt-2">${serviceName}</h2>
               <p class="secondary-color text-sm">${serviceNumber}</p>
             </div>
-            <p class="px-3 py-1 rounded-xl text-sm">${serviceSector }</p>
+            <p class="px-3 py-1 rounded-xl text-sm">${date}</p>
           </div>
     `;
 
@@ -45,8 +45,51 @@ for (button of callBtn) {
   });
 }
 
+// ------------ copy buttons functionality to copy number ----------------
+ document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.copy-btn');
+      if (!btn) return;
+
+      // find target element
+      const targetSelector = btn.dataset.copyTarget;
+      const el = document.querySelector(targetSelector);
+      if (!el) return;
+
+      const text = el.innerText.trim();
+
+      // modern Clipboard API
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          showStatus(btn, 'The number has been copied!');
+        });
+      } 
+      // fallback method
+      else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        showStatus(btn, 'The number has been copied!');
+      }
+    });
+
+    function showStatus(btn, message) {
+      const status = btn.parentElement.querySelector('.copy-status');
+      if (!status) return;
+      status.textContent = message;
+      setTimeout(() => (status.textContent = ''), 1500);
+    }
+
+
+
 // --------- clear button functionality to clear call history ---------
 document.getElementById('clear-btn').addEventListener('click', function() {
   document.getElementById('call-history').innerHTML = '';
   alert('The Call history is being cleared');
 }); 
+
